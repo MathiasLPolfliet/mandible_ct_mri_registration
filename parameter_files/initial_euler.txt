@@ -1,0 +1,72 @@
+(FixedInternalImagePixelType "float")
+(MovingInternalImagePixelType "float")
+//(FixedImageDimension 3)
+//(MovingImageDimension 3)
+(UseDirectionCosines "true")
+
+// **************** Main Components **************************
+
+// The following components should usually be left as they are:
+(Registration "MultiResolutionRegistration")
+
+(Interpolator "BSplineInterpolator")
+(ResampleInterpolator "FinalBSplineInterpolator")
+(Resampler "DefaultResampler")
+
+(FixedImagePyramid "FixedSmoothingImagePyramid")
+(MovingImagePyramid "MovingSmoothingImagePyramid")
+
+(Optimizer "AdaptiveStochasticGradientDescent")
+(Transform "EulerTransform")
+(Metric "AdvancedMattesMutualInformation")
+
+// ***************** Transformation **************************
+
+(AutomaticScalesEstimation "true")
+
+(AutomaticTransformInitialization "false")
+
+(HowToCombineTransforms "Compose")
+
+// ******************* Similarity measure *********************
+
+(NumberOfHistogramBins 48)
+
+(ErodeMask "false")
+
+// ******************** Multiresolution **********************
+
+(NumberOfResolutions 5)
+
+//(FixedImagePyramidSchedule )
+//(MovingImagePyramidSchedule )
+
+// ******************* Optimizer ****************************
+
+(MaximumNumberOfIterations 2000)
+(ASGDParameterEstimationMethod "Original")
+(AutomaticParameterEstimation "true")
+
+(MaximumStepLength 4 2 1 0.5 0.25)
+
+// **************** Image sampling **********************
+
+(NumberOfSpatialSamples 2048)
+(NewSamplesEveryIteration "true")
+(ImageSampler "RandomCoordinate")
+
+(UseRandomSampleRegion "false")
+(CheckNumberOfSamples "false")
+(MaximumNumberOfSamplingAttempts 50)
+
+// ************* Interpolation and Resampling ****************
+
+(BSplineInterpolationOrder 1)
+(FinalBSplineInterpolationOrder 3)
+
+(DefaultPixelValue -1025)
+
+(WriteResultImage "false")
+(ResultImagePixelType "short")
+(ResultImageFormat "nii")
+
