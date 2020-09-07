@@ -10,7 +10,7 @@
 
 ## Preparation
 
-Obtain a rough binary mask to limit the field of view to the manidble in the second stage of the registration. This mask should be dilated roughly 16 pixels compared to a segmentation mask of the manible (see below).
+Obtain a rough binary mask to limit the field of view to the mandible in the second stage of the registration. This mask should be dilated roughly 16 pixels compared to a segmentation mask of the manible (see below).
 
 ![Stages](/figures/mask.png)
 
