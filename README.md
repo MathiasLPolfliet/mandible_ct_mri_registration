@@ -19,16 +19,16 @@ ITK-SNAP can be used to manually draw the rough registration mask. The image abo
 ## Running the registration
 
 ### Make the folders for the output
-'''
+``` bash
 mkdir ./initial_rigid/
 mkdir ./rigid_with_mask/
-'''
+```
 
 ### Execute
-'''
-elastix -f ./CT.nii -m ./MRI.nii -out ./initial_rigid/ -p ./initial_trans.txt -p ./initial_euler.txt
-elastix -f ./CT.nii -fMask ./mask.nii -m ./MRI.nii -out ./rigid_with_mask/ -p ./masked_euler.txt -t0 ./initial_rigid/TransformParameters.1.txt
-'''
+``` bash
+elastix -f ./CT.nii -m ./MRI.nii -out ./initial_rigid/ -p ./parameter_files/initial_trans.txt -p ./parameter_files/initial_euler.txt
+elastix -f ./CT.nii -fMask ./mask.nii -m ./MRI.nii -out ./rigid_with_mask/ -p ./parameter_files/masked_euler.txt -t0 ./initial_rigid/TransformParameters.1.txt
+```
 
 
 
