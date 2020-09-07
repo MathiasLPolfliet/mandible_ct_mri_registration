@@ -1,6 +1,6 @@
 # CT-MRI registration of the mandible
 
-![Stages](/figures/fig1.png)
+![Stages](/figures/fig_1.png)
 
 ## Prerequisite installs
 [elastix](https://elastix.lumc.nl/)
